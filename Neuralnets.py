@@ -14,8 +14,8 @@ data = pd.read_csv("akadole1.csv", header=None)
 
 train = data 
 
-X_in = train.iloc[:,0:5]   # Includes all rows but only first 5 columns
-Y_out = train.iloc[:,5]    # include all rows and the last column
+X_in = train.iloc[:,0:5]  
+Y_out = train.iloc[:,5]    
 Y = np.reshape(Y_out.values, (-1,1))     # next steps include normalizing the data so that all variable values are in the same range
 scaler_x = MinMaxScaler()
 scaler_y = MinMaxScaler()
